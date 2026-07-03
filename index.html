@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Focus Space</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient background layer -->
+  <div class="ambient" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <button id="themeToggle" class="theme-toggle" aria-label="Ganti tema terang/gelap">
+    <span class="theme-icon">🌙</span>
+  </button>
+
+  <main class="dashboard">
+
+    <!-- GREETING -->
+    <section class="card card-greeting">
+      <div class="greeting-top">
+        <p class="eyebrow" id="dateLabel">Hari, Tanggal</p>
+        <time id="clock" class="clock">00:00:00</time>
+      </div>
+      <h1 id="greetingText" class="greeting-text">Halo</h1>
+
+      <form id="nameForm" class="name-form">
+        <input type="text" id="nameInput" placeholder="Siapa nama kamu?" maxlength="24" autocomplete="off">
+        <button type="submit" class="btn btn-ghost">Simpan</button>
+      </form>
+    </section>
+
+    <div class="grid-secondary">
+
+      <!-- FOCUS TIMER -->
+      <section class="card card-timer">
+        <div class="card-head">
+          <h2>Focus Timer</h2>
+          <div class="pomodoro-select" id="pomodoroSelect">
+            <button type="button" data-mins="15">15</button>
+            <button type="button" data-mins="25" class="active">25</button>
+            <button type="button" data-mins="45">45</button>
+          </div>
+        </div>
+
+        <div class="timer-ring-wrap">
+          <svg class="timer-ring" viewBox="0 0 200 200">
+            <circle class="ring-track" cx="100" cy="100" r="90"></circle>
+            <circle class="ring-progress" id="ringProgress" cx="100" cy="100" r="90"></circle>
+          </svg>
+          <div class="timer-display" id="timerDisplay">25:00</div>
+        </div>
+
+        <div class="timer-controls">
+          <button id="startBtn" class="btn btn-primary">Start</button>
+          <button id="stopBtn" class="btn btn-secondary">Stop</button>
+          <button id="resetBtn" class="btn btn-secondary">Reset</button>
+        </div>
+      </section>
+
+      <!-- TO-DO LIST -->
+      <section class="card card-todo">
+        <div class="card-head">
+          <h2>Tugas Hari Ini</h2>
+          <span class="task-count" id="taskCount">0 tersisa</span>
+        </div>
+
+        <form id="taskForm" class="task-form">
+          <input type="text" id="taskInput" placeholder="Tambah tugas baru…" autocomplete="off">
+          <button type="submit" class="btn btn-primary">Tambah</button>
+        </form>
+
+        <div class="task-toolbar">
+          <div class="filter-group" id="filterGroup">
+            <button type="button" data-filter="all" class="active">Semua</button>
+            <button type="button" data-filter="active">Aktif</button>
+            <button type="button" data-filter="done">Selesai</button>
+          </div>
+          <button type="button" id="sortBtn" class="btn btn-ghost btn-small">Urutkan A–Z</button>
+        </div>
+
+        <ul id="taskList" class="task-list"></ul>
+        <p id="emptyState" class="empty-state">Belum ada tugas. Tambahkan satu di atas ✨</p>
+      </section>
+
+    </div>
+
+    <section class="card card-links">
+      <div class="card-head">
+        <h2>Tautan Cepat</h2>
+      </div>
+      <form id="linkForm" class="link-form">
+        <input type="text" id="linkName" placeholder="Nama tautan" autocomplete="off">
+        <input type="url" id="linkUrl" placeholder="https://…" autocomplete="off">
+        <button type="submit" class="btn btn-primary">Tambah Link</button>
+      </form>
+      <div id="linkList" class="link-list"></div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
