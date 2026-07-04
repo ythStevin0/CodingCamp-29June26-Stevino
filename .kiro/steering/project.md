@@ -21,7 +21,7 @@ Semua data disimpan di sisi klien menggunakan **Local Storage API browser**:
 
 ## Struktur Folder
 ```
-web-app/
+CodingCamp-29June26-Stevino/
 ├── index.html
 ├── css/
 │   └── style.css      ← hanya 1 file CSS
