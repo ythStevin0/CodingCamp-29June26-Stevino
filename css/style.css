@@ -567,13 +567,17 @@ input::placeholder { color: var(--ink-faint); }
   font-size: 0.9rem;
   flex-shrink: 0;
 }
-.link-meta { min-width: 0; }
+.link-meta { 
+  min-width: 0; 
+  padding-right: 12px; /* Memberi ruang untuk tombol 'x' */
+}
 .link-meta .name {
   font-weight: 700;
   font-size: 0.88rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: block; /* Agar overflow & ellipsis bisa bekerja */
 }
 .link-meta .domain {
   font-size: 0.74rem;
