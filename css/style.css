@@ -1,12 +1,3 @@
-/* =========================================================
-   Life Dashboard — design tokens
-   Palette: soft sky-blue background, white cards, azure accent
-   Type: Plus Jakarta Sans (single family, weight-driven hierarchy)
-   Signature: mountain-lake hero illustration + circular focus ring
-   Scope: strictly MVP (Greeting, Focus Timer, To-Do, Quick Links)
-          + 5 official challenges. No extra features.
-   ========================================================= */
-
 :root {
   --bg: #eef3fc;
   --bg-2: #e4ecfa;
@@ -74,7 +65,7 @@ body {
   transition: background 0.3s ease;
 }
 
-/* ---------- Icons ---------- */
+/* Icons */
 .icon {
   width: 18px; height: 18px;
   fill: none;
@@ -88,7 +79,7 @@ body {
 .icon-accent { color: var(--accent); width: 20px; height: 20px; }
 .icon-sun { color: var(--accent); }
 
-/* ---------- Hero ---------- */
+/* Hero */
 .hero {
   position: relative;
   overflow: hidden;
@@ -219,7 +210,7 @@ body {
   .hero-illustration svg { mask-image: linear-gradient(180deg, transparent 0%, black 25%); -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 25%); }
 }
 
-/* ---------- Main grid ---------- */
+/* Main grid */
 .grid-main {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
@@ -234,14 +225,14 @@ body {
   padding: 26px 28px;
 }
 
-/* Card timer — stretch mengikuti tinggi kolom todo */
+/* Card timer -- stretch mengikuti tinggi kolom todo */
 .card-timer {
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
 
-/* Ring mengisi sisa ruang yang ada — ini yang mendorong tombol ke bawah secara natural */
+/* Ring mengisi sisa ruang yang ada -- ini yang mendorong tombol ke bawah secara natural */
 .card-timer .timer-ring-wrap {
   flex: 1;
   width: auto;
@@ -256,7 +247,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* Wrapper tombol — full width, tidak ada margin-top auto */
+/* Wrapper tombol -- full width, tidak ada margin-top auto */
 .timer-btns-wrap {
   display: flex;
   flex-direction: column;
@@ -297,7 +288,7 @@ body {
   border-radius: 999px;
 }
 
-/* ---------- Buttons & inputs ---------- */
+/* Buttons & inputs */
 .btn {
   font-family: var(--font);
   font-weight: 700;
@@ -325,7 +316,7 @@ body {
 .btn-secondary:hover { background: var(--accent-soft); border-color: var(--accent-soft); }
 .btn-block { width: 100%; padding: 14px; margin-bottom: 8px; }
 
-/* Wrapper tombol — konten rapat, tidak ada space ekstra */
+/* Wrapper tombol -- konten rapat, tidak ada space ekstra */
 .timer-btns-wrap {
   display: flex;
   flex-direction: column;
@@ -361,7 +352,7 @@ input[type="text"], input[type="url"] {
 input:focus { border-color: var(--accent); }
 input::placeholder { color: var(--ink-faint); }
 
-/* ---------- Focus timer ---------- */
+/* Focus timer */
 .pomodoro-select {
   display: flex;
   gap: 4px;
@@ -413,7 +404,7 @@ input::placeholder { color: var(--ink-faint); }
 
 .timer-row { display: flex; gap: 10px; }
 
-/* ---------- To-do list ---------- */
+/* To-do list */
 .task-form { display: flex; gap: 10px; margin-bottom: 14px; }
 .task-form input { flex: 1; }
 
@@ -542,7 +533,7 @@ input::placeholder { color: var(--ink-faint); }
 }
 .empty-state.visible { display: block; }
 
-/* ---------- Quick links ---------- */
+/* Quick links */
 .link-form { display: flex; gap: 10px; margin-bottom: 18px; flex-wrap: wrap; }
 .link-form input#linkName { flex: 1; min-width: 140px; }
 .link-form input#linkUrl { flex: 2; min-width: 200px; }
@@ -619,7 +610,7 @@ input::placeholder { color: var(--ink-faint); }
   * { transition: none !important; animation-duration: 0.01ms !important; }
 }
 
-/* ── Lonceng & Badge ── */
+/* Lonceng & Badge */
 .notif-wrap { position: relative; display: inline-flex; }
 
 .bell-badge {
@@ -648,7 +639,7 @@ input::placeholder { color: var(--ink-faint); }
 }
 .bell-ring { animation: bellRing 0.9s ease; }
 
-/* ── Toast container ── */
+/* Toast container */
 .toast-container {
   position: fixed;
   bottom: 24px; right: 24px;
